@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> BocadoAvocado 🥑</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets\css\styles.css">
+</head>
+<body>
+
+     <!-- Nuevo div para el fondo -->
+     <div class="background-overlay"></div>
+     <!-- Panel de control de espaciado -->
+     <div class="spacing-control">
+        <button class="spacing-toggle" aria-label="Mostrar/ocultar controles de espaciado" title="Controles de espaciado">
+            ⚙️
+        </button>
+        <h3>Control de Espaciado</h3>    
+         <div class="control-group">
+             <label for="letterSpacing">Espaciado entre letras:</label>
+             <input type="range" id="letterSpacing" min="0" max="10" value="2" step="0.5">
+         </div>
+         <div class="control-group">
+             <label for="lineHeight">Altura de línea:</label>
+             <input type="range" id="lineHeight" min="1" max="3" value="1.8" step="0.1">
+         </div>
+         <button id="resetSpacing" class="btn btn-secondary">Restaurar valores</button>
+     </div>
+    
+    <div class="container"> <!-- Contenedor Bootstrap para centralizar -->
+        <header class="my-4">
+            <h1>Bienvenido a BocadoAvocado 🥑</h1>
+            <nav aria-label="Barra de navegación principal">
+                <ul>
+                    <li><a href="#inicio" aria-current="page">Inicio</a></li>
+                    <li><a href="#tipos">Tipos de Aguacates</a></li>
+                    <li><a href="#curiosidades">Datos Curiosos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="inicio" aria-labelledby="inicio-titulo">
+                <h2 id="inicio-titulo" class="visually-hidden">Inicio</h2>
+                <p>Porque no todo en la vida es pizza... ¡también está el aguacate!</p>
+            </section>
+
+            <section id="tipos" aria-labelledby="tipos-titulo">
+                <h2 id="tipos-titulo">Tipos de Aguacates</h2>
+                <div class="grid">
+
+                    <div>
+                        <h3>Hass</h3>
+                        <img src="assets/images/aguacateHass.png" alt="Aguacate Hass de piel rugosa y oscura" width="200" height="200">
+                        <p>El más popular. Piel rugosa y oscura. Sabor cremoso y rico en grasas. Ideal para guacamole.</p>
+                    </div>
+
+                    <div>
+                        <h3>Fuerte</h3>
+                        <img src="assets/images/aguacateFuerte.jpg" alt="Imagen de un aguacate Fuerte">
+                        <p>Piel lisa y verde. Forma de pera. Sabor ligero y menos graso. Versátil en cocina.</p>
+                    </div>
+
+                    <div>
+                        <h3>Bacon</h3>
+                        <img src="assets/images/aguacateBacon.png" alt="Imagen de un aguacate Bacon">
+                        <p>Piel fina y verde brillante. Sabor suave y textura menos cremosa. Perfecto para ensaladas.</p>
+                    </div>
+
+                    <div>
+                        <h3>Pinkerton</h3>
+                        <img src="assets/images/aguacatePinkerton.png" alt="Imagen de un aguacate Pinkerton">
+                        <p>Forma alargada y piel gruesa. Sabor cremoso como el Hass. Hueso pequeño, más carne.</p>
+                    </div>
+
+                    <div>
+                        <h3>Reed</h3>
+                        <img src="assets/images/aguacateReed.png" alt="Imagen de un aguacate Reed">
+                        <p>Grande y redondo. Piel gruesa y verde. Sabor cremoso. Madura en verano. Ideal para untar.</p>
+                    </div>
+
+                    <div>
+                        <h3>Zutano</h3>
+                        <img src="assets/images/aguacateZutano.png" alt="Imagen de un aguacate Zutano">
+                        <p>Piel amarilla-verdosa. Textura menos cremosa. Sabor ligero y acuoso. Versátil en preparaciones.</p>
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="curiosidades" aria-labelledby="curiosidades-titulo">
+                <h2 id="curiosidades-titulo">Datos Curiosos</h2>
+                <ul>
+                    <li><strong>Los aguacates son bayas:</strong> Aunque no lo parezca, los aguacates son técnicamente una fruta y, más específicamente, ¡una baya!</li>
+                    <li><strong>Los aguacates no maduran en el árbol:</strong> A diferencia de otras frutas, los aguacates solo comienzan a madurar después de ser cosechados. Por eso, a veces los compras duros como una piedra y, días después, están perfectos para tu guacamole.</li>
+                    <li><strong>El guacamole tiene su día internacional:</strong> El 16 de septiembre se celebra el Día Internacional del Guacamole. ¡Una excusa perfecta para disfrutar de este delicioso dip!</li>
+                    <li><strong>Los aguacates flotan en el agua:</strong> Debido a su alto contenido de grasa, los aguacates pueden flotar en el agua. ¡Un truco útil para saber si están maduros!</li>
+                <li><strong>El aguacate más pesado del mundo:</strong> El récord Guinness lo tiene un aguacate de 2.5 kg, cultivado en Hawaii. ¡Ese es un aguacate para compartir!</li>
+                <li><strong>Los aguacates son viejos como los dinosaurios:</strong> Los aguacates existen desde hace millones de años. De hecho, se cree que los grandes mamíferos de la prehistoria, como los perezosos gigantes, ayudaron a dispersar sus semillas.</li>
+                </ul>
+            </section>
+
+            <section id="video-seccion" aria-labelledby="video-titulo">
+                <h2 id="video-titulo">Video: Todo sobre los aguacates</h2>
+                <div class="video-contenedor">
+                    <iframe 
+                        title="Video informativo sobre aguacates"
+                        width="560" 
+                        height="315" 
+                        src="https://www.youtube.com/embed/PpIeLxEke_o"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="transcripcion">
+                    <h3>Transcripción del video</h3>
+                    <p>Para acceder a la transcripción completa del video, utilice el siguiente enlace:</p>
+                    <a href="assets/transcription/aguacate-transcripcion.pdf" 
+                       download 
+                       class="btn btn-success"
+                       aria-label="Descargar transcripción del video en formato PDF">
+                        Descargar transcripción (PDF)
+                    </a>
+                </div>
+            </section>
+
+            <section id="contacto" aria-labelledby="contacto-titulo">
+                <h2 id="contacto-titulo">Contacto</h2>
+                <form action="#" method="post" novalidate>
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" 
+                               id="nombre" 
+                               name="nombre" 
+                               required 
+                               class="form-control"
+                               autocomplete="name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico:</label>
+                        <input type="email" 
+                               id="email" 
+                               name="email" 
+                               required 
+                               class="form-control"
+                               autocomplete="email">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" 
+                                  name="mensaje" 
+                                  required 
+                                  class="form-control"
+                                  rows="4"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-success">
+                        Enviar 🥑
+                    </button>
+                </form>
+            </section>
+        </main>
+
+        <footer class="mt-4">
+            <p>&copy; 2024 Mundo Aguacate by Sebasitan Diaz y Santiago Cardenas. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Nuevo script para el control de espaciado -->
+    <script src="assets/js/spacing-control.js"></script>
+</body>
+</html>
