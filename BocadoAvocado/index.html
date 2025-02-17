@@ -129,7 +129,7 @@
 
             <section id="contacto" aria-labelledby="contacto-titulo">
                 <h2 id="contacto-titulo">Contacto</h2>
-                <form action="#" method="post" novalidate>
+                <form action="#" method="post" novalidate id="contactForm">
                     <div class="form-group">
                         <label for="nombre">Nombre:</label>
                         <input type="text" 
@@ -139,17 +139,20 @@
                                class="form-control"
                                autocomplete="name">
                     </div>
-                    
+            
                     <div class="form-group">
-                        <label for="email">Correo Electrónico:</label>
+                        <label for="email" id="emailLabel">Correo Electrónico:</label>
                         <input type="email" 
                                id="email" 
                                name="email" 
                                required 
                                class="form-control"
                                autocomplete="email">
+                        <small id="emailError" style="color: red; display: none;">
+                            El correo debe contener un dominio válido (@gmail.com, @hotmail.com, etc.).
+                        </small>
                     </div>
-                    
+            
                     <div class="form-group">
                         <label for="mensaje">Mensaje:</label>
                         <textarea id="mensaje" 
@@ -158,12 +161,37 @@
                                   class="form-control"
                                   rows="4"></textarea>
                     </div>
-                    
+            
                     <button type="submit" class="btn btn-success">
                         Enviar 🥑
                     </button>
                 </form>
             </section>
+            
+            <script>
+                document.getElementById("email").addEventListener("input", function() {
+                    const emailInput = this;
+                    const emailLabel = document.getElementById("emailLabel");
+                    const emailError = document.getElementById("emailError");
+            
+                    // Lista de dominios válidos
+                    const validDomains = ["@gmail.com", "@hotmail.com", "@outlook.com", "@yahoo.com"];
+                    
+                    // Verifica si el email tiene un dominio válido
+                    const isValid = validDomains.some(domain => emailInput.value.includes(domain));
+            
+                    if (!isValid && emailInput.value !== "") {
+                        emailInput.style.borderColor = "red";
+                        emailLabel.style.color = "red";
+                        emailError.style.display = "block";
+                    } else {
+                        emailInput.style.borderColor = "";
+                        emailLabel.style.color = "";
+                        emailError.style.display = "none";
+                    }
+                });
+            </script>
+            
         </main>
 
         <footer class="mt-4">
