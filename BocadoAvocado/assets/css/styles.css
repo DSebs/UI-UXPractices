@@ -233,6 +233,11 @@ section h2::after {
     border-left: 4px solid var(--color-primary);
 }
 
+#lema strong{
+    justify-content: center;
+    text-align: center;
+}
+
 /* Sección de video */
 .video-contenedor {
     position: relative;
